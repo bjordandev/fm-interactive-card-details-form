@@ -7,3 +7,9 @@
     --c-neutral-dgv: hsl(279, 6%, 55%);
     --c-neutral-vdv: hsl(278, 68%, 11%);
 }
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
