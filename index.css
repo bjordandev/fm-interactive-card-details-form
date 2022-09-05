@@ -1,0 +1,9 @@
+:root {
+    --c-primary-red: hsl(0, 100%, 66%);
+    --c-primary-linear-gradiant-from: hsl(249, 99%, 64%);
+    --c-primary-linear-gradiant-to: hsl(278, 94%, 30%);
+    --c-neutral: hsl(0, 0%, 100%);
+    --c-neutral-lgv: hsl(270, 3%, 87%);
+    --c-neutral-dgv: hsl(279, 6%, 55%);
+    --c-neutral-vdv: hsl(278, 68%, 11%);
+}
