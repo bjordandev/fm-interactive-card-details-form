@@ -11,9 +11,58 @@
 body {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 18px;
-    font-weight: 500;
 }
 
+/* INPUT COMPONENT */
+
+.input__label {
+    font-size:13px;
+    display:block;
+    text-transform:uppercase;
+    margin-block-end: 8px;
+}
+
+.input__bar {
+    width:100%;
+    display:block;
+    padding:14px 10px;
+    border: 1px solid var(--c-neutral-lgv);
+    border-radius: 6px;
+    margin-block-end: 6px;
+}
+
+.input__bar::placeholder, .input__bar {
+    font-size:16px;
+}
+
+.input__bar::placeholder {
+    color:var(--c-neutral-dgv);
+}
+
+.input__bar {
+    color:var(--c-neutral-vgv);
+}
+
+.input__bar:not(focus):invalid {
+    border-color:var(--c-primary-red);
+}
+
+.input__message {
+    visibility: hidden;
+    display:block;
+    font-size:12px;
+    color: var(--c-primary-red);
+}
+
+.input__message::first-letter {
+    text-transform: uppercase;
+}
+
+.input__bar:not(focus):invalid + .input__message {
+    visibility: visible;
+}
+
+
 @media screen and (min-width: 1051px) {
-       
+    
 }
