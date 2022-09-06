@@ -182,6 +182,48 @@ body {
     font-size:14px;
 }
 
+/* THANK */
+
+.thank {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.thank__logo {
+    position:relative;
+    border-radius: 50%;
+    width:80px;
+    height:80px;
+    background: linear-gradient(to right, var(--c-primary-linear-gradiant-from), var(--c-primary-linear-gradiant-to));
+    margin-block-end:40px;
+}
+
+.thank__logo::after {
+    content:'';
+    position:absolute;
+    border-radius: inherit;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-image: url("images/bg-card-back.svg");
+}
+
+
+.thank__title {
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--c-neutral-vdv);
+    margin-block-end: 30px;
+}
+
+.thank__description {
+    font-size: 16px;
+    color: var(--c-neutral-dgv);
+}
+
 @media screen and (min-width: 1051px) {
     .button {
         padding: 14px;
