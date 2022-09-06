@@ -70,5 +70,7 @@ table {
 
 button {
 	border:none;
+	display:block;
+	width:100%;
 }
 
