@@ -62,7 +62,18 @@ body {
     visibility: visible;
 }
 
+.input.input--splitted  .input__section {
+    display:flex;
+    gap: 14px;
+}
+
+.input.input--splitted .input__bar {
+    flex-basis: 73px;
+    flex-grow: 1;
+}
+
 /* BUTTON */
+
 .button {
     position:relative;
     z-index:1;
@@ -92,6 +103,8 @@ body {
 .button:hover::after {
     transform:scaleX(1);
 }
+
+/* CARD */
 
 .card {
     width:76%;
