@@ -43,7 +43,7 @@ body {
     color:var(--c-neutral-vgv);
 }
 
-.input__bar:not(focus):invalid {
+.input.input--error > .input__bar {
     border-color:var(--c-primary-red);
 }
 
@@ -58,7 +58,7 @@ body {
     text-transform: uppercase;
 }
 
-.input__bar:not(focus):invalid + .input__message {
+.input.input--error > .input__message {
     visibility: visible;
 }
 
