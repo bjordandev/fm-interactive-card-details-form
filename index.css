@@ -93,11 +93,99 @@ body {
     transform:scaleX(1);
 }
 
+.card {
+    width:76%;
+    max-width:405px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.card.card--front {
+    background-image: url("images/bg-card-front.png");
+}
+
+.card.card--back {
+    height:220px;
+    background-image: url("images/bg-card-back.png");
+    background-position: 0 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.card__logo {
+    display:flex;
+    align-items: center;
+    margin-block-end: 40px;
+}
+
+.card__round, .card__circle {
+    display:block;
+    border-radius:50%;
+}
+
+.card__round {
+    width:25px;
+    height:25px;
+    margin-inline-end:10px;
+    background-color: white;
+}
+
+.card__circle {
+    width:15px;
+    height:15px;
+    background-color: transparent;
+    border:1px solid white;
+}
+
+.card__ccn {
+    display:flex;
+    margin-block-end: 40px;
+}
+
+.card__ccn > span {
+    color:var(--c-neutral);
+    text-transform:uppercase;
+    font-size:20px;
+}
+
+.card__ccn > span:not(:last-child) {
+    margin-inline-end: 5px;
+}
+
+.card__footer {
+    display:flex;
+    justify-content: space-between;
+}
+
+.card__author {
+    color:var(--c-neutral);
+    text-transform:uppercase;
+    font-size:15px;
+}
+
+.card__date {
+    color:var(--c-neutral);
+    text-transform:uppercase;
+    font-size:14px;
+}
 
 @media screen and (min-width: 1051px) {
     .button {
         padding: 14px;
         border-radius:6px;
         font-size:16px;
+    }
+
+    .card {
+        padding:20px 30px;
+    }
+
+    .card__ccn > span {
+        letter-spacing: 3px;
+        font-size:24px;
+    }
+
+    .card__ccn > span:not(:last-child) {
+        margin-inline-end: 15px;
     }
 }
