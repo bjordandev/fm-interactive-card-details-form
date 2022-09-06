@@ -13,6 +13,85 @@ body {
     font-size: 18px;
 }
 
-@media screen and (min-width: 1051px) {
+.main {
+    max-width: calc(1050px + 165px);
+    width:91.7%;
+    margin: 0 auto;
+    margin-top:60px;
+}
 
+.main__cards {
+    position:relative;
+    max-width:540px;
+    z-index:1;
+    margin-bottom:50px;
+}
+
+.main__card-front, .main__card-back {
+    position:absolute;
+}
+
+.main__card-front {
+    bottom:0;
+    left:0;
+}
+
+.main__card-back {
+    top:0;
+    right:0;
+    z-index:-1;
+}
+
+.main__steps {
+    max-width: 600px;
+    margin:0 auto;
+}
+
+.main__form-section {
+    margin-bottom:22px;
+}
+
+.main__form-section-splitted {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom:27px;
+}
+
+@media screen and (min-width: 1320px) {
+    body {
+        position:relative;
+    }
+
+    .main {
+        position:absolute;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        margin:0;
+        margin-left:165px;
+        top:50%;
+        transform:translateY(-50%);
+    }
+
+    .main__cards {
+        margin-bottom:0px;
+    }
+
+    .main__card-front, .main__card-back {
+        top:0;
+        left:0;
+        bottom:0;
+        right:0;
+    }
+
+    .main__card-back {
+        top:100%;
+        left:100%;
+        transform:translate(-100%, -100%);
+    }
+
+    .main__steps {
+        flex-basis: 384px;
+        margin:0;
+    }
 }
