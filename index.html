@@ -12,25 +12,101 @@
     <title>Document</title>
 </head>
 <body>
-    <main class="main helper">
+    <main class="main">
         <section class="main__cards">
-            <div class="main__card-front">
-                
+            <div class="main__card-front card card--front">
+                <header class="card__logo">
+                    <span class="card__round"></span>
+                    <span class="card__circle"></span>
+                </header>
+                <span class="card__ccn" id="ccn-card">
+                    <span>0000</span>
+                    <span>0000</span>
+                    <span>0000</span>
+                    <span>0000</span>
+                </span>
+                <footer class="card__footer">
+                    <span class="card__name" id="name-card">
+                        Jane Appleseed
+                    </span>
+                    <span class="card__date">
+                        <span id="month-card">00</span>/<span id="year-card">00</span>
+                    </span>
+                </footer>
             </div>
-            <div class="main__card-back">
-                BACK CARD
+            <div class="main__card-back card card--back">
+                <span class="card__ccv" id="cvc-card">000</span>
             </div>
         </section>
-        <section class="main__steps">
-            <form class="main__form">
-                <div class="main__form-section"></div>
-                <div class="main__form-section"></div>
-                <div class="main__form-section-splitted">
-                    <div class=""></div>
-                    <div class=""></div>
+        <section class="main__steps steps">
+            <form id="form" class="main__form steps__content steps--show">
+                <div class="main__form-section form-section">
+                    <label class="form-section__label" for="name">Cardholder Name</label>
+                    <input
+                        class="form-section__input input"
+                        placeholder="e.g. Jane Appleseed"
+                        id="name"
+                        name="name" 
+                        type="text">
+                    <span class="form-section__error">Can't be blank</span>
                 </div>
-                <button class="main__form-button">CONFIRM</button>
+                <div class="main__form-section form-section">
+                    <label class="form-section__label" for="ccn">Card Number</label>
+                    <input class="form-section__input input" 
+                           id="ccn" 
+                           type="tel" 
+                           inputmode="numeric" 
+                           pattern="[0-9\s]{16,16}" 
+                           autocomplete="cc-number" 
+                           maxlength="16" 
+                           placeholder="e.g. 1234 5678 9123 0000">
+                    <span class="form-section__error">Wrong format, numbers only</span>
+                </div>
+                <div class="main__form-section-last main__form-group">
+                    <div class="form-section">
+                        <label class="form-section__label" for="month">Exp. Date (MM/YY)</label>
+                        <div class="form-section__splitted-input">
+                            <input
+                                class="form-section__input input input--small"
+                                placeholder="MM"
+                                maxlength="2"
+                                id="month"
+                                name="month" 
+                                type="text">
+                            <input
+                                class="form-section__input input input--small"
+                                placeholder="YY"
+                                maxlength="2"
+                                id="year"
+                                name="year" 
+                                type="text">
+                        </div>
+                        <span class="form-section__error">Wrong format, numbers only</span>
+                    </div>
+                    <div class="form-section">
+                        <label class="form-section__label" for="cvc">CVC</label>
+                        <input
+                            class="form-section__input input"
+                            placeholder="e.g. 123"
+                            maxlength="3"
+                            id="cvc"
+                            name="cvc" 
+                            type="text">
+                        <span class="form-section__error">Wrong format, numbers only</span>
+                    </div>
+                </div>
+                <button id="button" class="button">
+                    Confirm
+                </button>
             </form>
+            <div class="main__thank steps__content">
+                <svg width="80" height="80" class="main__logo" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="40" fill="url(#a)"/><path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3"/><defs><linearGradient id="a" x1="-23.014" y1="11.507" x2="0" y2="91.507" gradientUnits="userSpaceOnUse"><stop stop-color="#6348FE"/><stop offset="1" stop-color="#610595"/></linearGradient></defs></svg>
+                <h2 class="main__title-thank">Thank you!</h2>
+                <p class="main__description-thank">We've added your card details</p>
+                <button class="button">
+                    Confirm
+                </button>
+            </div>
         </section>
     </main>
 

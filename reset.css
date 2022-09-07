@@ -68,7 +68,8 @@ table {
 	border-spacing: 0;
 }
 
-button {
+button, input {
+	outline:none;
 	border:none;
 	display:block;
 	width:100%;

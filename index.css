@@ -1,3 +1,5 @@
+/* BASES */
+
 :root {
     --c-primary-red: hsl(0, 100%, 66%);
     --c-primary-linear-gradiant-from: hsl(249, 99%, 64%);
@@ -11,20 +13,25 @@
 body {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 18px;
+    background-size:100% 238px;
+    background-repeat: no-repeat;
+    background-image: url("images/bg-main-mobile.png");
 }
+
+/* LAYOUTS */
 
 .main {
     max-width: calc(1050px + 165px);
     width:91.7%;
     margin: 0 auto;
-    margin-top:60px;
+    margin-top:30px;
 }
 
 .main__cards {
     position:relative;
-    max-width:540px;
+    height:251px;
+    margin-bottom:46px;
     z-index:1;
-    margin-bottom:50px;
 }
 
 .main__card-front, .main__card-back {
@@ -37,9 +44,9 @@ body {
 }
 
 .main__card-back {
-    top:0;
+    z-index: -1;
     right:0;
-    z-index:-1;
+    top:0;
 }
 
 .main__steps {
@@ -47,19 +54,222 @@ body {
     margin:0 auto;
 }
 
+.main__form, .main__thank {
+    width:calc(100% - 10px);
+    margin-left:10px;
+}
+
+.steps__content {
+    display:none;
+}
+
+.main__title-thank {
+    color:var(--c-neutral-vdv);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 27px;
+    margin-bottom:30px;
+    letter-spacing: 2px;
+}
+
+.main__description-thank {
+    color:var(--c-neutral-dgv);
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom:40px;
+}
+
+.main__logo {    
+    display:block; 
+    margin: 0 auto;
+    margin-bottom:30px;
+}
+
 .main__form-section {
     margin-bottom:22px;
 }
 
-.main__form-section-splitted {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom:27px;
+.main__form-section-last {
+    margin-bottom:15px;
 }
 
-@media screen and (min-width: 1320px) {
+
+/* COMPONENTS */
+
+.card {
+    padding: 15px 20px;
+    width:286px;
+    height:160px;
+}
+
+.card__logo {
+    display:flex;
+    align-items: center;
+    margin-bottom:40px;
+}
+
+.card__round, .card__circle {
+    border-radius: 50%;
+}
+
+.card__round {
+    width:30px;
+    height:30px;
+    background-color:white;
+    margin-right:14px;
+}
+
+.card__circle {
+    width:15px;
+    height:15px;
+    background-color:transparent;
+    border: 1px solid var(--c-neutral-lgv);
+}
+
+.card__ccn {
+    display:block;
+    margin-bottom:20px;
+}
+
+.card__ccn > span {
+   text-transform: uppercase;
+   color:white;
+   font-size: 17px;
+   letter-spacing: 2px;
+}
+
+.card__ccn > span:not(:last-child) {
+    margin-right:7px;
+ }
+
+ .card__footer {
+    display:flex;
+    justify-content: space-between;
+ }
+
+ .card__name, .card__date {
+    color:white;
+    text-transform: uppercase;
+    font-size: 12px;
+ }
+
+.card--front {
+    background: url("images/bg-card-front.png");
+    background-position: 0 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.card--back {
+    background: url("images/bg-card-back.png");
+    background-position: 0 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.steps--show {
+    display:block !important;
+}
+
+.form-section__label {
+    display:block;
+    font-size:14px;
+    margin-bottom:6px;
+    text-transform: uppercase;
+    color: var(--c-neutral-vdv);
+}
+
+.form-section__input {
+    margin-bottom:3px;
+}
+
+.input {
+    display:block;
+    width:100%;
+    padding:13px;
+    border-radius:6px; 
+    background-color: white;
+    border: 1px solid var(--c-neutral-lgv);
+}
+
+.input--small {
+    max-width:75px;
+}
+
+.button {
+    padding:20px;
+    background-color: var(--c-neutral-vdv);
+    color:white;
+    font-size:18px;
+    border-radius: 8px;
+}
+
+.form-section__input::placeholder, .form-section__input {
+    font-size:18px;
+}
+
+.form-section__input::placeholder {
+    color:var(--c-neutral-dgv)
+}
+
+.form-section__input {
+    color:var(--c-neutral-vdv);
+    transition: border-color 200ms ease-in-out;
+}
+
+.form-section__input:focus {
+    border-color:var(--c-neutral-vdv);
+}
+
+.form-section.form-section--error .form-section__input:not(:focus) {
+    border-color:var(--c-primary-red);
+}
+
+.form-section__error {
+    opacity: 0;
+    font-size: 13px;
+    color:var(--c-primary-red);
+    transition: visibility 200ms ease-in-out;
+}
+
+.form-section__error::first-letter {
+    text-transform:uppercase;
+}
+
+.form-section.form-section--error .form-section__error {
+    opacity: 1;
+}
+
+.main__form-group {
+    display:flex;
+    width:100%;
+    justify-content: space-between;
+}
+
+.form-section__splitted-input {
+    display:flex;
+    max-width:170px;
+    justify-content: space-between;
+}
+
+.main__form-group > div {
+    width:47%;
+}
+
+.card__ccv {
+    display:block;
+    font-size: 13px;
+    color:white;
+    margin-top:55px;
+    margin-left:200px;
+}
+
+@media screen and (min-width: 1100px) {
     body {
         position:relative;
+        background-size:482px 100%;
+        background-repeat: no-repeat;
     }
 
     .main {
@@ -69,21 +279,27 @@ body {
         align-items: center;
         margin:0;
         margin-left:165px;
+        margin-right:200px;
         top:50%;
         transform:translateY(-50%);
     }
 
     .main__cards {
-        margin-bottom:0px;
+        margin:0;
+        height:530px;
+        flex-basis:540px;
     }
 
     .main__card-front, .main__card-back {
         top:0;
         left:0;
-        bottom:0;
-        right:0;
     }
-
+    
+    .main__card-front {
+        bottom:0;
+        left:0;
+    }
+    
     .main__card-back {
         top:100%;
         left:100%;
@@ -93,5 +309,63 @@ body {
     .main__steps {
         flex-basis: 384px;
         margin:0;
+    }
+
+    .main__form, .main__thank {
+       width:100%;
+       margin:0;
+    }
+
+    .form-section__label {
+        font-size:16px;
+        margin-bottom:8px;
+    }
+
+    /* COMPONENTS */
+
+    .card {
+        padding: 20px 30px;
+        width:447px;
+        height:248px;
+    }
+
+    .card__logo {
+        margin-bottom:70px;
+    }
+    
+    .card__round {
+        width:42px;
+        height:42px;
+    }
+
+    .card__circle {
+        width:20px;
+        height:20px;
+    }
+
+    .card__ccn {
+        margin-bottom:45px;
+    }
+    
+    .card__ccn > span {
+       font-size: 25px;
+       letter-spacing: 3px;
+    }
+    
+    .card__ccn > span:not(:last-child) {
+        margin-right:14px;
+     }
+
+     .card__name, .card__date {
+        font-size: 16px;
+     }
+
+     .card__ccv {
+        margin-top:95px;
+        margin-left:330px;
+    }
+
+     .button {
+        padding:15px;
     }
 }
