@@ -1,9 +1,10 @@
 class DirectTyping {
-    constructor(input, target, typing, validatorRgp=null) {
+    constructor(input, target, typing, validatorRgp=null, nullValue="") {
         this.input = input;
         this.target = target;
         this.content = "";
         this.validator = validatorRgp;
+        this.nullValue = nullValue;
 
         if (typing)
             this.typing = typing.bind(this); 
@@ -47,7 +48,7 @@ const cvc = new DirectTyping(
     document.getElementById(CVC_ID),
     document.getElementById(`${CVC_ID}-card`),
     null,
-    CCN_REGEX
+    CVC_REGEX,
 );
 
 const name = new DirectTyping(
